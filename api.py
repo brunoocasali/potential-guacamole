@@ -10,12 +10,13 @@ app = Flask(__name__)
 def run():
     classifier = joblib.load('sklearn.joblib')
 
-    json_params = json.dumps(request.json, ensure_ascii=False)
-    json = json.loads(json_params)
+    # TODO:
+    # refactor the way to retrieve the data and predict it.
+    req_data = request.get_json()
 
-    #
+    print(req_data)
 
-    return classifier.predict(json)
+    return classifier.predict(req_data)
 
 @app.route('/', methods=['GET'])
 def index():
