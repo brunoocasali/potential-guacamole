@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app: &app
+    build: .
+    command: "python3.6 ./api.py -m flask run"
+    volumes:
+      - .:/app
+    ports:
+      - '5000:5000'
+    stdin_open: true
+    tty: true
