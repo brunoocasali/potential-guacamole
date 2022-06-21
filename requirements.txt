@@ -10,7 +10,7 @@ gunicorn==19.7.1
 joblib==0.11
 MarkupSafe==1.0
 nltk==3.3
-numpy==1.14.1
+numpy==1.22.0
 packaging==16.8
 pandas==0.20.2
 pbr==4.1.0
